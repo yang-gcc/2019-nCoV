@@ -34,6 +34,16 @@
 
 <body>
 	<div id="realTimeData">
+		<div class="freshDiv">
+			<span class="freshBtn">
+				<svg viewBox="0 0 1024 1024" width="32" height="32">
+					<path
+						d="M512 96C283.2 96 96 283.2 96 512s187.2 416 416 416 416-187.2 416-416S740.8 96 512 96z m224 388h-196l89.6-89.6C600.2 363.6 558.2 344 512 344c-92.4 0-168 75.6-168 168s75.6 168 168 168c69.8 0 130.6-42.4 155.2-104h59.6c-27.8 92.6-112.6 160-214.8 160-124.6 0-224-100.8-224-224s100.8-224 224-224c61.6 0 117.6 25.2 158.2 65.8L736 288v196z"
+						fill="#3d9006">
+					</path>
+				</svg>
+			</span>
+		</div>
 		<div class="datatitle">全国疫情实时数据统计</div>
 		<div class="datasubtitle">(截至2020-01-31 08:09)</div>
 		<div class="process">
@@ -109,6 +119,7 @@
 			yesterday_current_unconfirmed = 0, yesterday_current_serious = 0, yesterday_current_confirmed = 0;
 
 		var progress = 0;
+		var processDocTipsbg = 'rgba(235, 75, 30, 0.9)';
 
 		//3218435e78f4d1873ab412313d6d77c5
 		var dataApi = '';
@@ -243,8 +254,13 @@
 		$.getJSON("../Json/data.json?" + Date.parse(new Date()), function (data) {
 			dataSource = data;
 
-			option.legend.selected['观察中'] = false;
-			option.legend.selected['死亡/确诊'] = false;
+			option.legend.selected['累计确诊'] = false;
+			option.legend.selected['累计确诊+现有疑似'] = false;
+			option.legend.selected['观察中'] = true;
+			option.legend.selected['死亡/确诊'] = true;
+			option.legend.selected['新增确诊'] = false;
+			option.legend.selected['新增疑似'] = false;
+			option.legend.selected['新增(疑似+确诊)'] = false;
 			option.dataset.source = dataSource;
 
 			var yesterday_data = data.filter(item =>
@@ -331,6 +347,7 @@
 				updateIncrease($(".statistics>li>span").eq(5), curedCount, yesterday_cured);
 
 				console.log(summaryDataIn);
+
 			})
 		}
 
@@ -362,24 +379,38 @@
 				);
 			}
 		}
-		/* 动态改变背景 及 进度*/
+		/* 动态改变背景 及 进度 刷新按钮动画*/
 		function freshbackgroud(currentConfirmedCount, confirmedCount) {
 			progress = 1 - currentConfirmedCount / confirmedCount;
+
+			/*实时数据背景*/
 			$('#realTimeData').css({ 'background-color': 'rgba(130, 210, 10, ' + 0 + ')' });
 			$('#realTimeData').animate({ backgroundColor: 'rgba(130, 210, 10, ' + progress + ')' }, 3000);
 
+			/*进度条进度*/
 			$('.processValue').css({ 'width': 0 * 100 + '%' });
 			$('.processValue').animate({ width: progress * 100 + '%' }, 3000);
 
+			/*医生卡通位置*/
 			$('.processDoc').css({ 'left': 0 * 100 + '%' });
 			$('.processDoc').animate({ left: progress * 100 + '%' }, 3000);
-			//window.setTimeout(() => $('.processDoc').css({ 'left': 'calc(' + progress * 100 + '% - 12px)' }), 3000);
+
+			/*卡通提示背景*/
+			let bgR = 255 * (1 - progress);
+			let bgG = 255 * progress;
+			processDocTipsbg = 'rgba(' + bgR + ', ' + bgG + ', 0, 0.9)'
+
+			/*刷新按钮动画*/
+			$(".freshBtn>svg").addClass("animation-rotate");
+			window.setTimeout(() => $(".freshBtn>svg").removeClass("animation-rotate"), 3000);
 
 		}
 
-		var tipContent = "1、数据每10分钟自动刷新一次，如有更新会在数字右上角提示。<br>"
+		var tipContent = ""
+			+ "1、数据每10分钟自动刷新一次，如有更新会在数字右上角提示。<br>"
 			+ "2、数字右下角为当前相对昨天24时官方数据的增（减）量。<br>"
-			+ "3、(实时数据采集自网络，仅供参考！实际数据以官方为准！！)<br>";
+			+ "3、(实时数据采集自网络，仅供参考！实际数据以官方为准！！)<br>"
+			+ "4、2020年3月19日起每日数据不再更新，请参考卫健委官方数据。<br>";
 		var tip_index = 0;
 		$(".datasubtitle").bind("mouseenter",
 			function () {
@@ -394,7 +425,7 @@
 
 		var docTipContent = "任务进度："
 			+ (progress * 100).toFixed(2)
-			+ "%<br>革命尚未成功，同志仍需努力！";
+			+ "%<br>全民战“疫”，坚持到底！";
 		$(".processDoc").bind("mouseenter",
 			function () {
 				var that = this;
@@ -402,12 +433,14 @@
 					tip_index = layer.tips(docTipContent,
 						that,
 						{
-							tips: [1, 'rgba(235,75,30,0.9)'],
+							tips: [1, processDocTipsbg],
 							time: 0
 						});
 				}
 			}).bind("mouseleave", () => layer.close(tip_index))
-
+		$(".freshBtn").click(function () {
+			update();
+		});
 
 	</script>
 	<script>

@@ -1,11 +1,18 @@
 # 2019-nCoV(Covid-19)
 
+-----2020 年 3 月 19 日起每日数据不再更新，请参考卫健委官方数据。----------
+
+![点击查看图表](Image/0.jpg)
+
+![点击查看图表](Image/00.jpg)
+
 [![GitHub license](https://img.shields.io/github/license/JackieZheng/2019-nCoV)](https://github.com/JackieZheng/2019-nCoV/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/JackieZheng/2019-nCoV)](https://github.com/JackieZheng/2019-nCoV/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/JackieZheng/2019-nCoV)](https://github.com/JackieZheng/2019-nCoV/network)
 [![GitHub issues](https://img.shields.io/github/issues/JackieZheng/2019-nCoV)](https://github.com/JackieZheng/2019-nCoV/issues)
 [![CSDN](https://img.shields.io/badge/CSDN-JackieZheng-green)](https://blog.csdn.net/admans)
 [![ShieldsIO](https://img.shields.io/badge/Shields-IO-yellowgreen)](https://shields.io/)
+[![Gitee](https://gitee.com/JackieZheng/GitHub-2019-nCoV/badge/star.svg?theme=dark)](https://gitee.com/JackieZheng/GitHub-2019-nCoV/)
 
 全国新型冠状病毒肺炎（NCP）疫情每日数据动态趋势
 
@@ -17,7 +24,7 @@
 
 > 国家卫生健康委 2020-2-21 将“新型冠状病毒肺炎”英文名称修订为“COVID-19”，与世界卫生组织命名保持一致，中文名称保持不变。[[国家卫生健康委]](http://www.nhc.gov.cn/yzygj/s7653p/202002/33393aa53d984ccdb1053a52b6bef810.shtml)
 
-[![点击查看图表](Image/20200227.png)](https://jackiezheng.github.io/2019-nCoV/web)
+[![点击查看图表](Image/20200319.png)](https://jackiezheng.github.io/2019-nCoV/web)
 
 [![点击查看图表](Image/20200220202226.png)](https://jackiezheng.github.io/2019-nCoV/web)
 
@@ -28,6 +35,8 @@
 ## 相关链接
 
 ### 开源项目
+
+2019 Novel Coronavirus COVID-19 (2019-nCoV) Data [https://github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19)
 
 武汉开源 [https://weileizeng.github.io/OpenSourceWuhan/](https://weileizeng.github.io/OpenSourceWuhan/)
 
@@ -69,7 +78,21 @@ ncov web [https://github.com/pzhaonet/ncov](https://github.com/pzhaonet/ncov)
 
 周边疫情查询工具（腾讯）[https://ncov.html5.qq.com/communityRenmin](https://ncov.html5.qq.com/communityRenmin)
 
-### 资料
+### 资料资讯
+
+教育部发布《中小学校新型冠状病毒肺炎防控指南》 [https://mp.weixin.qq.com/s/qR_s0ZyAeSum-XNUg4Y8Ew](https://mp.weixin.qq.com/s/qR_s0ZyAeSum-XNUg4Y8Ew)
+
+新冠肺炎疫情防控国家教育政策文件汇编（PDF 下载） [https://mp.weixin.qq.com/s/-6KT3WHrieEBUe9oL5YPiQ](https://mp.weixin.qq.com/s/-6KT3WHrieEBUe9oL5YPiQ)
+
+《北京市新型冠状病毒肺炎防控指引》融媒体电子书 [https://mp.weixin.qq.com/s/NylDcIWu0p4QEpJr90hX0Q](https://mp.weixin.qq.com/s/NylDcIWu0p4QEpJr90hX0Q)
+
+全国总工会： 企业应按正常标准向在家上班职工付工资 [http://www.acftu.org/template/10041/file.jsp?cid=222&aid=99904](http://www.acftu.org/template/10041/file.jsp?cid=222&aid=99904)
+
+重磅！更严防控，北京再发通告！(2020-2-28) [https://mp.weixin.qq.com/s/3cHknEo7UOyF_bxqv1FU_g](https://mp.weixin.qq.com/s/3cHknEo7UOyF_bxqv1FU_g)
+
+开学时间继续推迟！各地开学时间更新汇总(2020-2-28) [https://mp.weixin.qq.com/s/-Kwy4Tot15nwkHnovLC9cg](https://mp.weixin.qq.com/s/-Kwy4Tot15nwkHnovLC9cg)
+
+​ 中央最新通知！​ 大中小学等开学时间原则上继续推迟(2020-2-27) [https://mp.weixin.qq.com/s/fZRUW3Kv5VuB2kMuXEqDgw](https://mp.weixin.qq.com/s/fZRUW3Kv5VuB2kMuXEqDgw)
 
 《企事业单位复工复产疫情防控措施指南》 [https://mp.weixin.qq.com/s/RFETviol4fHyVEtjihHNiA](https://mp.weixin.qq.com/s/RFETviol4fHyVEtjihHNiA)
 
@@ -86,6 +109,8 @@ ncov web [https://github.com/pzhaonet/ncov](https://github.com/pzhaonet/ncov)
 ![除了战胜它我们别无选择](Image/2.png)
 
 ### 学习资源
+
+31 省市在线教育资源汇总来了！（PDF 版下载）[https://mp.weixin.qq.com/s/lqhjBJhowU35CBdJssO8NQ](https://mp.weixin.qq.com/s/lqhjBJhowU35CBdJssO8NQ)
 
 国家中小学网络云平台[http://ykt.eduyun.cn/](http://ykt.eduyun.cn/)
 
@@ -105,4 +130,4 @@ ncov web [https://github.com/pzhaonet/ncov](https://github.com/pzhaonet/ncov)
 
 ## 全国各地开学时间一览表
 
-[![全国各地开学时间一览表](Image/xuexiao.jpeg)](https://baijiahao.baidu.com/s?id=1659137892911623930)
+开学时间继续推迟！各地开学时间更新汇总(2020-2-28) [https://mp.weixin.qq.com/s/-Kwy4Tot15nwkHnovLC9cg](https://mp.weixin.qq.com/s/-Kwy4Tot15nwkHnovLC9cg)
